@@ -148,3 +148,8 @@
 .age-range:hover {
   text-decoration: underline;
 }
+
+#custom-forms > p {
+  max-width: 35rem;
+  margin-bottom: 0px;
+}

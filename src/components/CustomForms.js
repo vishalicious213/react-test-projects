@@ -78,6 +78,8 @@ function CustomForms() {
 
                 <button id='custom-forms-submit' onSubmit={() => handleSubmit()}>Submit!</button>
             </form>
+
+            <p><a href='https://github.com/vishalicious213/react-test-projects/blob/main/src/components/CustomForms.js'>View source code</a></p>
         </div>
     )
 }
