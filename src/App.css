@@ -102,3 +102,49 @@
 #controlled-inputs > form > button {
   margin: .25rem;
 }
+
+/* CUSTOM FORMS */
+
+#custom-forms {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#custom-forms > form {
+  /* border: 1px solid blue; */
+  max-width: 20rem;
+}
+
+.form-field {
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+.wide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-name {
+  padding-right: .25rem;
+
+}
+
+#custom-forms-name-box {
+  width: 100%;
+}
+
+#custom-forms-name {
+  min-width: 81%;
+  max-width: 100%;
+}
+
+#custom-forms-submit {
+  width: 100%;
+}
+
+.age-range:hover {
+  text-decoration: underline;
+}
