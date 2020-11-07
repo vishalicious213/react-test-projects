@@ -70,12 +70,19 @@
 
 #controlled-inputs {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#controlled-inputs > p {
+  max-width: 35rem;
+  margin-bottom: 0px;
 }
 
 #controlled-inputs > form {
   display: flex;
   flex-direction: column;
+  max-width: 17rem;  
 }
 
 #controlled-inputs > form > label {
