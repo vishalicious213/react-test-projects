@@ -43,7 +43,8 @@ function ControlledInputs() {
       </form>
 
       <p>Controlled inputs use state to set the value of an input in a form. The gist of it is that the input's value attribute is set to a key in state. Initializing state then sets the initial value of the input, and updating state updates the input's value.</p>
-      <p>By letting state control the input values, code can be added to the handleSubmit to clear/reset those fields by clearing state after data has been submitted.</p>
+      <p>By letting state control the input values, code can be added to handleSubmit to clear/reset those fields by clearing state after data has been submitted.</p>
+      <p><a href='https://github.com/vishalicious213/react-test-projects/blob/main/src/components/ControlledInputs.js'>View source code</a></p>
     </div>
   );
 }
