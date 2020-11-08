@@ -54,13 +54,13 @@ function CustomForms() {
                 <div className='wide'>
                     <label className='form-field'>
                         <span className='field-name'>Home State:</span>
-                        <select id="homeState">
-                            <option name="homeState" value={null}></option>
-                            <option name="homeState" value="Alabama">Alabama</option>
-                            <option name="homeState" value="Alaska">Alaska</option>
-                            <option name="homeState" value="Arizona">Arizona</option>
-                            <option name="homeState" value="Arkansas">Arkansas</option>
-                            <option name="homeState" value="Colorado">Colorado</option>
+                        <select id="homeState" name='homeState' onChange={event => handleChange(event)}>
+                            <option value={null}></option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="Colorado">Colorado</option>
                         </select>
                     </label>
 
