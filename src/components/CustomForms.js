@@ -64,7 +64,10 @@ function CustomForms() {
                             <option value='Alaska'>Alaska</option>
                             <option value='Arizona'>Arizona</option>
                             <option value='Arkansas'>Arkansas</option>
+                            <option value='California'>California</option>
                             <option value='Colorado'>Colorado</option>
+                            <option value='New York'>New York</option>
+                            <option value='Texas'>Texas</option>
                         </select>
                     </label>
 

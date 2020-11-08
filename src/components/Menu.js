@@ -6,7 +6,7 @@ function Menu() {
         <div id='menu'>
             <ul id='navbar'>
                 <li><Link to='/'>Home</Link></li>
-                <li><Link to='/controlled'>Controlled Input</Link></li>
+                <li><Link to='/controlled'>Controlled Inputs</Link></li>
                 <li><Link to='/customforms'>Custom Forms</Link></li>
             </ul>
         </div>
