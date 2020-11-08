@@ -84,7 +84,7 @@ function CustomForms() {
             </form>
 
             <p>This form's inputs include text, radio buttons, a drop-down and checkbox. Their values are all held in state. A single event handler updates state for all but the checkbox, which uses a different handler to toggle its checked value between true/false.</p>
-            <p>The submit handler resets all of the form's fields with 'event.target.reset()' after it resets state to its initial values. </p>
+            <p>The submit handler resets all of the form's fields with <i>'event.target.reset()'</i> after it resets state to its initial values. </p>
             <p><a href='https://github.com/vishalicious213/react-test-projects/blob/main/src/components/CustomForms.js'>View source code</a></p>
         </div>
     )
