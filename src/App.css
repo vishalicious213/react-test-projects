@@ -106,14 +106,12 @@
 /* CUSTOM FORMS */
 
 #custom-forms {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #custom-forms > form {
-  /* border: 1px solid blue; */
   max-width: 20rem;
 }
 

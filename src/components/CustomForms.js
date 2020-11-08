@@ -2,31 +2,31 @@ import React, { useState } from "react";
 import "../App.css";
 
 function CustomForms() {
-    const [formData, setFormData] = useState({ isGoing: "" });
-    const [user, setUser] = useState({ username: "", password: "" });
-
-    const handleInputChange = event => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
-    };
+    const [formData, setFormData] = useState({ username: "", age: '', homeState: "", isGoing: false });
 
     const handleChange = event => {
-        setUser({ ...user, [event.target.name]: event.target.value });
+        console.log(event.target.name, event.target.value)
+        setFormData({ ...formData, [event.target.name]: event.target.value });
     };
     
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(user.username);
-        console.log(user.password);
-        setUser({ username: '', password: '' });
+        console.log('name', formData.username);
+        console.log('age', formData.age);
+        console.log('state', formData.homeState);
+        console.log('going', formData.isGoing);
+        setFormData({ username: '', age: '', homeState: "", isGoing: false });
+        event.target.reset(); // resets all of the HTML/JSX fields!
     };
 
     return (
         <div id='custom-forms'>
-            <form>
+            {console.log(formData)}
+            <form onSubmit={event => handleSubmit(event)}>
                 <div className='form-field wide'>
                     <label id='custom-forms-name-box'>
                         <span className='field-name'>Name:</span>
-                        <input id='custom-forms-name' type="text" onChange={event => handleChange(event)} />
+                        <input id='custom-forms-name' type="text" name='username' value={formData.username} onChange={event => handleChange(event)} />
                     </label>
                     {/* <button onSubmit={() => handleSubmit()}>Submit!</button> */}
                 </div>
@@ -54,29 +54,29 @@ function CustomForms() {
                 <div className='wide'>
                     <label className='form-field'>
                         <span className='field-name'>Home State:</span>
-                        <select id="states" name="states">
-                            <option value="Alabama">Alabama</option>
-                            <option value="Alaska">Alaska</option>
-                            <option value="Arizona">Arizona</option>
-                            <option value="Arkansas">Arkansas</option>
-                            <option value="Colorado">Colorado</option>
+                        <select id="homeState">
+                            <option name="homeState" value={null}></option>
+                            <option name="homeState" value="Alabama">Alabama</option>
+                            <option name="homeState" value="Alaska">Alaska</option>
+                            <option name="homeState" value="Arizona">Arizona</option>
+                            <option name="homeState" value="Arkansas">Arkansas</option>
+                            <option name="homeState" value="Colorado">Colorado</option>
                         </select>
                     </label>
 
                     <label className='form-field'>
-                        {/* <label> */}
-                            <input
-                                name="isGoing"
-                                type="checkbox"
-                                checked={false}
-                                onChange={handleInputChange}
-                            />
-                            <span>RSVP</span>
-                        {/* </label> */}
+                        <input
+                            name="isGoing"
+                            type="checkbox"
+                            checked={formData.isGoing}
+                            value={formData.isGoing}
+                            onChange={() => setFormData({ isGoing: true })}
+                        />
+                        <span>RSVP</span>
                     </label>
                 </div>
 
-                <button id='custom-forms-submit' onSubmit={() => handleSubmit()}>Submit!</button>
+                <button id='custom-forms-submit'>Submit!</button>
             </form>
 
             <p><a href='https://github.com/vishalicious213/react-test-projects/blob/main/src/components/CustomForms.js'>View source code</a></p>
