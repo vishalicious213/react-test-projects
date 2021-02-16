@@ -5,8 +5,8 @@ const FileUpload = () => {
         <>
             <form className='upload-form'>
                 <div className='file-upload'>
-                    <input type='file' className='custom-file-input' id='customFile' />
-                    <label className='custom-file-label' htmlFor='customFile'>Choose file</label>
+                    <label className='upload-input-label' htmlFor='uploadFile'>Choose file</label>
+                    <input type='file' className='upload-input' id='uploadFile' />
                 </div>
 
                 <input type='submit' value='Upload' className='upload-button' />
