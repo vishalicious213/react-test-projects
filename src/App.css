@@ -1,6 +1,6 @@
-.App {
-  /* text-align: center; */
-}
+/* .App {
+  text-align: center;
+} */
 
 .App-logo {
   height: 40vmin;
@@ -154,6 +154,7 @@
 
 /* UPLOAD */
 
-/* .Upload {
-  color: black;
-} */
+.Upload {
+  display: flex;
+  justify-content: center;
+}
