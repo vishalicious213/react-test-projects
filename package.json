@@ -2,6 +2,7 @@
   "name": "react-test-projects",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
@@ -18,7 +19,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "uploadstart": "node server.js", 
+    "serverstart": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
