@@ -20,8 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "uploadstart": "node server.js", 
-    "serverstart": "nodemon server.js",
+    
+    "upload": "node server.js", 
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
