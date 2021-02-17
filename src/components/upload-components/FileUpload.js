@@ -45,7 +45,11 @@ const FileUpload = () => {
 
                 <input type='submit' value='Upload' className='upload-button' />
 
-                {uploaded ? (<img src={uploaded} alt='' />) : null}
+                {uploaded ? (
+                    <div className='image-container'>
+                        <img src={uploaded} alt='' />
+                    </div>
+                ) : null}
             </form>
         </>
     )
