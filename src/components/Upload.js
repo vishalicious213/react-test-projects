@@ -7,7 +7,7 @@ import '../App.css'
 const Upload = () => {
     return (
         <div className='Upload'>
-            <h4>Upload</h4>
+            <h4>Upload File or Photo</h4>
 
             <FileUpload />
         </div>

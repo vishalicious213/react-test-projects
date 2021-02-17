@@ -3,19 +3,14 @@ import axios from 'axios'
 
 const FileUpload = () => {
     const [file, setFile] = useState('')
-    const [filename, setFilename] = useState('Choose file')
-    const [uploadedFile, setUploadedFile] = useState({})
 
     const onChange = e => {
-        // console.log('file: ', e.target.files[0])
         setFile(e.target.files[0]);
-        setFilename(e.target.files[0].name)
-        // console.log(file)
     }
 
     const onSubmit = async e => {
         e.preventDefault()
-        console.log('state: ', file)
+        // console.log('state: ', file)
         const formData = new FormData()
         formData.append('file', file)
 
@@ -26,9 +21,8 @@ const FileUpload = () => {
                 }
             })
 
-            const { fileName, filePath } = res.data
+            console.log('File upload successful: ', res.data)
 
-            setUploadedFile({ fileName, filePath })
         } catch(err) {
             if(err.response.status === 500) {
                 console.log('There was a problem with the server')
