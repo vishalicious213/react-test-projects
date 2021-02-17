@@ -154,10 +154,19 @@
 
 /* UPLOAD */
 
-.Upload {
+#Upload {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#Upload > p {
+  max-width: 35rem;
+  margin-bottom: 0px;
+}
+
+.closer {
+  margin-top: 0px;
 }
 
 .upload-form {
