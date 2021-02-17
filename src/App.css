@@ -155,14 +155,12 @@
 /* UPLOAD */
 
 .Upload {
-  /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .upload-form {
-  /* outline: 1px solid orange; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -170,7 +168,6 @@
 }
 
 .file-upload {
-  /* outline: 1px solid blue; */
   width: 80%;
   position: relative;
 }
@@ -178,10 +175,9 @@
 .upload-button {
   width: 80%;
   margin-top: 2rem;
-  color: white;
-  background: dodgerblue;
-  border: none;
-  border-radius: .35rem;
+  background: #efefef;
+  border: 1px solid #767676;
+  border-radius: .25rem;
   padding: .5rem;
 }
 
@@ -190,24 +186,23 @@
 }
 
 .upload-input {
-  border: 1px solid #9c27b0;
-  border-radius: .35rem;
-  padding: .25rem 0;
+  border: 1px solid #767676;
+  border-radius: .25rem;
+  padding: .3rem 0;
   width: 100%;
   position: absolute;
   z-index: -1;
-  /* top: 6px; */
   left: 0;
   font-size: .9rem;
   color: rgb(153,153,153);
 }
 
-.upload-input-label {
+.choose-file-button {
   display: inline-block;
   padding: .35rem .75rem;
   cursor: pointer;
-  border-radius: .35rem 0 0 .35rem;
-  background-color: #9c27b0;
+  border: 1px solid #767676;
+  border-radius: .25rem 0 0 .25rem;
+  background-color: #efefef;
   font-size: .9rem;
-  color: #fff
 }

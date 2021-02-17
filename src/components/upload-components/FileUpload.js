@@ -36,7 +36,7 @@ const FileUpload = () => {
         <>
             <form className='upload-form' onSubmit={onSubmit}>
                 <div className='file-upload'>
-                    <label className='upload-input-label' htmlFor='uploadFile'>Choose file</label>
+                    <label className='choose-file-button' htmlFor='uploadFile'>Choose file</label>
                     <input type='file' className='upload-input' id='uploadFile' onChange={onChange} />
                 </div>
 
