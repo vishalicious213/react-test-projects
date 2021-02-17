@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const FileUpload = () => {
     const [file, setFile] = useState('')
+    const [uploaded, setUploaded] = useState('')
 
     const onChange = e => {
         setFile(e.target.files[0]);
@@ -23,6 +24,8 @@ const FileUpload = () => {
 
             console.log('File upload successful: ', res.data)
 
+            setUploaded(res.data.filePath)
+
         } catch(err) {
             if(err.response.status === 500) {
                 console.log('There was a problem with the server')
@@ -41,6 +44,8 @@ const FileUpload = () => {
                 </div>
 
                 <input type='submit' value='Upload' className='upload-button' />
+
+                {uploaded ? (<img src={uploaded} alt='' />) : null}
             </form>
         </>
     )
