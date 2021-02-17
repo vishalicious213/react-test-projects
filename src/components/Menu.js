@@ -8,6 +8,7 @@ function Menu() {
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/controlled'>Controlled Inputs</Link></li>
                 <li><Link to='/customforms'>Custom Forms</Link></li>
+                <li><Link to='/upload'>Upload</Link></li>
             </ul>
         </div>
     )
