@@ -4,6 +4,8 @@ import Home from './components/Home'
 import ControlledInputs from './components/ControlledInputs'
 import CustomForms from './components/CustomForms'
 import Upload from './components/Upload'
+import Modal from './components/Modal'
+import Portal from './components/Portal'
 import './App.css';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <Route path='/controlled' component={ControlledInputs}/>
       <Route path='/customforms' component={CustomForms}/>
       <Route path='/upload' component={Upload}/>
+      <Route path='/modal' component={Modal}/>
+      <Route path='/portal' component={Portal}/>
     </div>
   );
 }

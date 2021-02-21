@@ -224,3 +224,96 @@
 .image-container img {
   width: 100%;
 }
+
+/* MODAL */
+
+.page-body {
+  outline: 1px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75%;
+  width: 75%;
+  position: absolute;
+  left: 12.5%;
+  top: 12.5%;
+  background: rgba(220, 220, 220, .5);
+  
+}
+
+.page-body button {
+  margin-top: 1rem;
+}
+
+.modal {
+  outline: 1px solid gainsboro;
+  margin-top: 1rem;
+  width: 90%;
+  text-align: center;
+}
+
+/* PORTAL */
+
+.portals-container {
+  display: flex;
+  justify-content: center;
+}
+
+.portal {
+  position: relative;
+  z-index: 1;
+}
+
+.other {
+  position: relative;
+  z-index: 2;
+  background-color: red;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.modal-button {
+  width: 10rem;
+  margin: .5rem 1rem;
+}
+
+/* PORTAL MODAL */
+
+.portalModal {
+  outline: 1px solid red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 5rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 10;
+}
+
+.closePortalModal {
+  width: 80.25%;
+  margin-top: 1rem;
+  background: #efefef;
+  border: 1px solid #767676;
+  border-radius: .25rem;
+  padding: .5rem;
+}
+
+.closePortalModal:hover {
+  cursor: pointer;
+}
