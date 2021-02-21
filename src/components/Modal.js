@@ -21,7 +21,7 @@ function Modal() {
     }, [])
 
     return (
-        <div className='Modal' ref={outside}>
+        <div className='page-body' ref={outside}>
             <button onClick={() => setIsOpen(!isOpen)}>Toggle Modal</button>
             {isOpen ? (
                 <div className='modal'>
