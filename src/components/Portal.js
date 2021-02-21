@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PortalModal from './portal-components/PortalModal'
+import Upload from './Upload'
 
 export default function Portal() {
     const [isOpen, setIsOpen] = useState(false)
@@ -9,7 +10,7 @@ export default function Portal() {
             <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
             <PortalModal open={isOpen} onClose={() => setIsOpen(false)}>
-                MODAL
+                <Upload />
             </PortalModal>
         </div>
 
