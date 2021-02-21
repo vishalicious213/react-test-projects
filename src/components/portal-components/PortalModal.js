@@ -8,8 +8,8 @@ export default function PortalModal({ open, children, onClose }) {
         <>
         <div className='portalOverlay'></div>
         <div className='portalModal'>
-            <button onClick={onClose}>Close Modal</button>
             {children}
+            <button className='closePortalModal' onClick={onClose}>Close Modal</button>
         </div>
         </>,
         document.getElementById('portal')
