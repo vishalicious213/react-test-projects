@@ -265,3 +265,16 @@
   background-color: red;
   padding: 1rem;
 }
+
+/* PORTAL MODAL */
+
+.portalModal {
+  outline: 1px solid red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 5rem;
+  z-index: 10;
+}
