@@ -251,3 +251,17 @@
   width: 90%;
   text-align: center;
 }
+
+/* PORTAL */
+
+.portal {
+  position: relative;
+  z-index: 1;
+}
+
+.other {
+  position: relative;
+  z-index: 2;
+  background-color: red;
+  padding: 1rem;
+}
