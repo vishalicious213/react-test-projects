@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PortalModal from './portal-components/PortalModal'
 
 export default function Portal() {
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <>
         <div className='portal'>
-            <button>Open Modal</button>
+            <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
-            <PortalModal>
+            <PortalModal open={isOpen}>
                 MODAL
             </PortalModal>
         </div>
