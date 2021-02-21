@@ -8,7 +8,7 @@ export default function Portal() {
         <div className='portal'>
             <button onClick={() => setIsOpen(true)}>Open Modal</button>
 
-            <PortalModal open={isOpen}>
+            <PortalModal open={isOpen} onClose={() => setIsOpen(false)}>
                 MODAL
             </PortalModal>
         </div>
