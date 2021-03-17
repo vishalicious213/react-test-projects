@@ -15,6 +15,7 @@ const Cloudinary = () => {
         axios
             .post('https://api.cloudinary.com/v1_1/expressgroomer/image/upload', formData)
             .then(res => console.log(res.data.url, res.data.secure_url))
+            .catch(error => console.log("Cloudinary error: ", error))
     }
 
     return (

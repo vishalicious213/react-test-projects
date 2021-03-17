@@ -317,3 +317,10 @@
 .closePortalModal:hover {
   cursor: pointer;
 }
+
+/* CLOUDINARY */
+
+#cloudinary {
+  display: flex;
+  justify-content: center;
+}
