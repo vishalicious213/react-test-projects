@@ -9,6 +9,10 @@ const Cloudinary = () => {
         const formData = new FormData()
         formData.append('file', files[0])
         formData.append('upload_preset', 'sendCloudinary')
+
+        axios
+            .post('https://api.cloudinary.com/v1_1/expressgroomer/image/upload', formData)
+            .then(res => console.log(res))
     }
 
     return (
