@@ -11,6 +11,7 @@ function Menu() {
                 <li><Link to='/upload'>Upload File/Photo</Link></li>
                 <li><Link to='/modal'>Toggle Modal</Link></li>
                 <li><Link to='portal'>Portal Modal</Link></li>
+                <li><Link to='cloudinary'>Cloudinary</Link></li>
             </ul>
         </div>
     )

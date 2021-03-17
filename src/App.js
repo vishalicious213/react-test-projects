@@ -6,6 +6,7 @@ import CustomForms from './components/CustomForms'
 import Upload from './components/Upload'
 import Modal from './components/Modal'
 import Portal from './components/Portal'
+import Cloudinary from './components/Cloudinary'
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path='/upload' component={Upload}/>
       <Route path='/modal' component={Modal}/>
       <Route path='/portal' component={Portal}/>
+      <Route path='/cloudinary' component={Cloudinary}/>
     </div>
   );
 }
