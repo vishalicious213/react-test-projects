@@ -7,19 +7,20 @@ function GCal() {
     const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
     const SCOPES = "https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar"
 
-    const handleClick = () => {
-        gapi.load('client:auth2', () => {
-            console.log('loaded client')
+    gapi.load('client:auth2', () => {
+        console.log('loaded client')
+        
+        gapi.client.init({
+            apiKey: API_KEY,
+            clientId: CLIENT_ID,
+            discoveryDocs: DISCOVERY_DOCS,
+            scope: SCOPES,
+        })
+        
+        gapi.client.load('calendar', 'v3', () => console.log('loaded calendar'))
+    })
 
-            gapi.client.init({
-                apiKey: API_KEY,
-                clientId: CLIENT_ID,
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES,
-            })
-
-            gapi.client.load('calendar', 'v3', () => console.log('bam!'))
-
+    const handleAddEvent = () => {
             gapi.auth2.getAuthInstance().signIn()
             .then(() => {
                 const eventStartTime = new Date()
@@ -77,25 +78,24 @@ function GCal() {
                 console.log('ADDING EVENT', event)
                 window.open(event.htmlLink)
                 })
-
-                /*
-                    Uncomment the following block to get events
-                */
-                
-                // get events
-                console.log('GETTING EVENTS')
-                gapi.client.calendar.events.list({
-                'calendarId': 'primary',
-                //   'timeMin': (new Date()).toISOString(),
-                'showDeleted': false,
-                'singleEvents': true,
-                'maxResults': 10,
-                'orderBy': 'startTime'
-                }).then(response => {
-                const events = response.result.items
-                console.log('EVENTS: ', events)
-                })
             })
+        // })
+    }
+
+    const handleGetEvents = () => {
+        console.log('GETTING EVENTS')
+        gapi.client.calendar.events
+        .list({
+            'calendarId': 'primary',
+            //   'timeMin': (new Date()).toISOString(),
+            'showDeleted': false,
+            'singleEvents': true,
+            'maxResults': 10,
+            'orderBy': 'startTime'
+        })
+        .then(response => {
+            const events = response.result.items
+            console.log('EVENTS: ', events)
         })
     }
 
@@ -106,8 +106,8 @@ function GCal() {
             {/* <p style={{fontSize: 18}}>Uncomment the get events code to get events</p> */}
             {/* <p style={{fontSize: 18}}>Don't forget to add your Client Id and Api key</p> */}
             <div style={{display: 'flex'}}>
-                <button style={{width: 100, height: 30, marginRight: '1rem'}} onClick={handleClick}>Add Event</button>
-                <button style={{width: 100, height: 30}} onClick={handleClick}>Get Events</button>
+                <button style={{width: 100, height: 30, marginRight: '1rem'}} onClick={handleAddEvent}>Add Event</button>
+                <button style={{width: 100, height: 30}} onClick={handleGetEvents}>Get Events</button>
             </div>
         </header>
         </div>
