@@ -55,20 +55,6 @@ function GCal() {
                     }
                 }
 
-                // const event = {
-                //     summary: 'Dog groom',
-                //     location: '13009 Oakland Rd, Ridgely, MD 21660',
-                //     description: "Groomingzzzz",
-                //     start: {
-                //         dateTime: eventStartTime,
-                //         timeZone: 'America/New_York',
-                //     },
-                //     end: {
-                //         dateTime: eventEndTime,
-                //         timeZone: 'America/New_York',
-                //     }
-                // }
-
                 var request = gapi.client.calendar.events.insert({
                 'calendarId': 'primary',
                 'resource': event,
@@ -79,7 +65,6 @@ function GCal() {
                 window.open(event.htmlLink)
                 })
             })
-        // })
     }
 
     const handleGetEvents = () => {
@@ -103,8 +88,6 @@ function GCal() {
         <div className="App">
         <header className="App-header">
             <p>Click to add event to Google Calendar</p>
-            {/* <p style={{fontSize: 18}}>Uncomment the get events code to get events</p> */}
-            {/* <p style={{fontSize: 18}}>Don't forget to add your Client Id and Api key</p> */}
             <div style={{display: 'flex'}}>
                 <button style={{width: 100, height: 30, marginRight: '1rem'}} onClick={handleAddEvent}>Add Event</button>
                 <button style={{width: 100, height: 30}} onClick={handleGetEvents}>Get Events</button>
