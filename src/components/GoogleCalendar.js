@@ -103,9 +103,12 @@ function GCal() {
         <div className="App">
         <header className="App-header">
             <p>Click to add event to Google Calendar</p>
-            <p style={{fontSize: 18}}>Uncomment the get events code to get events</p>
-            <p style={{fontSize: 18}}>Don't forget to add your Client Id and Api key</p>
-            <button style={{width: 100, height: 50}} onClick={handleClick}>Add Event</button>
+            {/* <p style={{fontSize: 18}}>Uncomment the get events code to get events</p> */}
+            {/* <p style={{fontSize: 18}}>Don't forget to add your Client Id and Api key</p> */}
+            <div style={{display: 'flex'}}>
+                <button style={{width: 100, height: 30, marginRight: '1rem'}} onClick={handleClick}>Add Event</button>
+                <button style={{width: 100, height: 30}} onClick={handleClick}>Get Events</button>
+            </div>
         </header>
         </div>
     )
