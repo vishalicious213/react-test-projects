@@ -7,6 +7,7 @@ import Upload from './components/Upload'
 import Modal from './components/Modal'
 import Portal from './components/Portal'
 import Cloudinary from './components/Cloudinary'
+import GCal from './components/GoogleCalendar'
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/modal' component={Modal}/>
       <Route path='/portal' component={Portal}/>
       <Route path='/cloudinary' component={Cloudinary}/>
+      <Route path='/gcal' component={GCal}/>
     </div>
   );
 }

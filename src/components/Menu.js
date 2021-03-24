@@ -12,6 +12,7 @@ function Menu() {
                 <li><Link to='/modal'>Toggle Modal</Link></li>
                 <li><Link to='portal'>Portal Modal</Link></li>
                 <li><Link to='cloudinary'>Cloudinary</Link></li>
+                <li><Link to='/gcal'>Google Calendar</Link></li>
             </ul>
         </div>
     )
