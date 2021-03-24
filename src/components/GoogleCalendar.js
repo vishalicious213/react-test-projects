@@ -7,6 +7,7 @@ function GCal() {
     const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
     const SCOPES = "https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar"
 
+    // Load client & calendar
     gapi.load('client:auth2', () => {
         console.log('loaded client')
         
@@ -20,53 +21,55 @@ function GCal() {
         gapi.client.load('calendar', 'v3', () => console.log('loaded calendar'))
     })
 
+    // Add an event (hardcoded event)
     const handleAddEvent = () => {
-            gapi.auth2.getAuthInstance().signIn()
-            .then(() => {
-                const eventStartTime = new Date()
-                const eventEndTime = new Date()
-                eventEndTime.setMinutes(eventEndTime.getMinutes() + 30)
+        gapi.auth2.getAuthInstance().signIn()
+        .then(() => {
+            const eventStartTime = new Date()
+            const eventEndTime = new Date()
+            eventEndTime.setMinutes(eventEndTime.getMinutes() + 30)
 
-                var event = {
-                    'summary': 'Awesome Event 3!',
-                    'location': '800 Howard St., San Francisco, CA 94103',
-                    'description': 'Really great refreshments',
-                    'start': {
+            var event = {
+                'summary': '3/24 Refactor',
+                'location': '800 Howard St., San Francisco, CA 94103',
+                'description': 'Really great refreshments',
+                'start': {
                     'dateTime': eventStartTime,
                     'timeZone': 'America/Los_Angeles'
-                    },
-                    'end': {
+                },
+                'end': {
                     'dateTime': eventStartTime,
                     'timeZone': 'America/Los_Angeles'
-                    },
-                    // 'recurrence': [
-                    //   'RRULE:FREQ=DAILY;COUNT=2'
-                    // ],
-                    'attendees': [
+                },
+                // 'recurrence': [
+                //   'RRULE:FREQ=DAILY;COUNT=2'
+                // ],
+                'attendees': [
                     {'email': 'lpage@example.com'},
                     {'email': 'sbrin@example.com'}
-                    ],
-                    'reminders': {
-                    'useDefault': false,
-                    'overrides': [
-                        {'method': 'email', 'minutes': 24 * 60},
-                        {'method': 'popup', 'minutes': 10}
-                    ]
-                    }
+                ],
+                'reminders': {
+                'useDefault': false,
+                'overrides': [
+                    {'method': 'email', 'minutes': 24 * 60},
+                    {'method': 'popup', 'minutes': 10}
+                ]
                 }
+            }
 
-                var request = gapi.client.calendar.events.insert({
+            var request = gapi.client.calendar.events.insert({
                 'calendarId': 'primary',
                 'resource': event,
-                })
+            })
 
-                request.execute(event => {
+            request.execute(event => {
                 console.log('ADDING EVENT', event)
                 window.open(event.htmlLink)
-                })
             })
+        })
     }
 
+    // Get the calendar & events
     const handleGetEvents = () => {
         console.log('GETTING EVENTS')
         gapi.client.calendar.events
